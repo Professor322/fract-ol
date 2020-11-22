@@ -6,5 +6,6 @@
 #define FRACT_OL_FRACT_OL_H
 
 #include "libft.h"
+#include "mlx.h"
 
 #endif //FRACT_OL_FRACT_OL_H
