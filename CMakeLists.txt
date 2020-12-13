@@ -29,7 +29,11 @@ set_target_properties(libXext PROPERTIES
         IMPORTED_LOCATION "/usr/lib/x86_64-linux-gnu/libXext.so.6"
         )
 
+add_library(libm SHARED IMPORTED) # or STATIC instead of SHARED
+set_target_properties(libm PROPERTIES
+        IMPORTED_LOCATION "/usr/lib/x86_64-linux-gnu/libm.so"
+        )
 add_executable(fract-ol ./src/main.c)
-target_link_libraries(fract-ol libmlx libX11 libXext libft)
+target_link_libraries(fract-ol libmlx libX11 libXext libft libm)
 
 

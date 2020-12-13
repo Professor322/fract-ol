@@ -14,11 +14,11 @@ all: $(NAME)
 
 $(NAME):  $(OBJ)
 	@make  -C ./libft all
-	$(COMPILER) $(OBJ) $(CHECK_FLAGS) $(COMPILE_FLAGS) -I $(ADD_INC) -I $(ADD_LIBFT_INC) -I $(ADD_MLX_INC) -L $(ADD_MLX_INC) -o $(NAME)
+	$(COMPILER) $(OBJ) $(CHECK_FLAGS) $(COMPILE_FLAGS) -I $(ADD_INC) -I $(ADD_LIBFT_INC) -L $(ADD_LIBFT_INC)-I $(ADD_MLX_INC) -L $(ADD_MLX_INC) -o $(NAME)
 	@echo ======[Done]======
 %.o : %.c
 	@echo "$(NAME) >>> Add/Update $<"
-	$(COMPILER) -c -o $@ $(CHECK_FLAGS) $(COMPILE_FLAGS) -I $(ADD_INC) -I $(ADD_LIBFT_INC) -I $(ADD_MLX_INC) -L $(ADD_MLX_INC) $<
+	$(COMPILER) -c -o $@ $(CHECK_FLAGS) $(COMPILE_FLAGS) -I $(ADD_INC) -I $(ADD_LIBFT_INC) -L $(ADD_LIBFT_INC) -I $(ADD_MLX_INC) -L $(ADD_MLX_INC) $<
 
 clean:
 	@rm -f $(ADD_SRC)*.o

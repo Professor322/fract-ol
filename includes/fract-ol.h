@@ -7,9 +7,15 @@
 
 #include "libft.h"
 #include "mlx.h"
+#include <math.h>
 
 #define WIDTH 1000
 #define HEIGHT 1000
+
+typedef struct s_complex {
+	double real;
+	double imaginary;
+}			   t_complex;
 
 typedef struct	s_image
 {
